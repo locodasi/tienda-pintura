@@ -73,6 +73,8 @@ Cambiar títulos, nombres de productos e imágenes sin tocar código.
 
 Esto hace que cualquier persona que no sepa programar pueda modificar todo el contenido de la web solo editando data.json.
 
+Luego ejecuta el build.bat y ya tendras tu nueva version build para hacer deploy
+
 ### 🔍 Validación del JSON
 
 Para asegurarte de que tu data.json está bien escrito y no rompe la web, podés usar estas páginas de validación online:
