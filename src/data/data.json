@@ -1,0 +1,118 @@
+{
+    "automovil": {
+        "title": "Automóvil",
+        "subsections": {
+            "lo_bueno": {
+                "text": "Lo bueno",
+                "products": [
+                    {
+                        "name": "Pintura Acrílica Premium",
+                        "img": "/images/auto1.jpg"
+                    },
+                    {
+                        "name": "Esmalte para llantas",
+                        "img": "/images/auto1.jpg"
+                    }
+                ]
+            },
+            "lo_barato": {
+                "text": "Lo barato",
+                "products": [
+                    {
+                        "name": "Pintura económica para auto",
+                        "img": "/images/auto1.jpg"
+                    }
+                ]
+            },
+            "lo_profesional": {
+                "text": "Lo profesional",
+                "products": [
+                    {
+                        "name": "Pintura profesional para carrocería",
+                        "img": "/images/auto1.jpg"
+                    },
+                    {
+                        "name": "Kit completo de pulido",
+                        "img": "/images/auto1.jpg"
+                    }
+                ]
+            }
+        }
+    },
+    "casa": {
+        "title": "Casa",
+        "subsections": {
+            "lo_bueno": {
+                "text": "Lo bueno",
+                "products": [
+                    {
+                        "name": "Latex interior premium",
+                        "img": "/images/casa1.jpg"
+                    }
+                ]
+            },
+            "lo_barato": {
+                "text": "Lo barato",
+                "products": [
+                    {
+                        "name": "Pintura económica blanca",
+                        "img": "/images/casa1.jpg"
+                    }
+                ]
+            },
+            "lo_profesional": {
+                "text": "Lo profesional",
+                "products": [
+                    {
+                        "name": "Sellador antihumedad pro",
+                        "img": "/images/casa1.jpg"
+                    }
+                ]
+            }
+        }
+    },
+    "personal": {
+        "title": "Personal",
+        "subsections": {
+            "lo_bueno": {
+                "text": "Lo bueno",
+                "products": [
+                    {
+                        "name": "Pintura corporal no tóxica",
+                        "img": "/images/personal1.jpg"
+                    },
+                    {
+                        "name": "Pintura corporal no tóxica",
+                        "img": "/images/personal1.jpg"
+                    },
+                    {
+                        "name": "Pintura corporal no tóxica",
+                        "img": "/images/personal1.jpg"
+                    },
+                    {
+                        "name": "Pintura corporal no tóxica",
+                        "img": "/images/personal1.jpg"
+                    }
+                ]
+            },
+            "lo_barato": {
+                "text": "Lo barato",
+                "products": [
+                    {
+                        "name": "Témperas básicas",
+                        "img": "/images/personal1.jpg"
+                    }
+                ]
+            },
+            "lo_profesional": {
+                "text": "Lo profesional",
+                "products": [
+                    {
+                        "name": "Set de aerógrafos Pro",
+                        "img": "/images/personal1.jpg"
+                    }
+                ]
+            }
+        }
+    }
+}

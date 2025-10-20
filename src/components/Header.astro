@@ -1,0 +1,74 @@
+---
+interface SectionLink {
+  id: string;
+  title: string;
+}
+
+interface Props {
+  sections: SectionLink[];
+}
+
+const { sections } = Astro.props as Props;
+---
+<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-red-600">🎨 Pinturería Colores</h1>
+  
+      <!-- Botón hamburguesa -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1 cursor-pointer">
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+      </button>
+  
+      <!-- Menú desktop -->
+      <nav class="hidden md:flex gap-6">
+        <a href="#about" class="hover:text-red-600">Inicio</a>
+        {sections.map(s => (
+          <a href={`#${s.id}`} class="hover:text-red-600">{s.title}</a>
+        ))}
+        <a href="#contacto" class="hover:text-red-600">Contacto</a>
+      </nav>
+    </div>
+  
+    <!-- Menú móvil -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed inset-0 bg-white flex flex-col items-center justify-center gap-6 text-xl transition-all duration-300"
+    >
+      <a href="#about" class="hover:text-red-600 mobile-link">Inicio</a>
+
+      {sections.map(s => (
+        <a href={`#${s.id}`} class="hover:text-red-600 mobile-link">{s.title}</a>
+      ))}
+      <a href="#contacto" class="hover:text-red-600 mobile-link">Contacto</a>
+      <button id="close-menu" class="mt-8 px-4 py-2 bg-red-600 text-white rounded cursor-pointer">
+        Cerrar
+      </button>
+    </div>
+  
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeBtn = document.getElementById('close-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+  
+      // Abrir menú
+      menuBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.remove('hidden');
+      });
+  
+      // Cerrar menú con botón
+      closeBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.add('hidden');
+      });
+  
+      // Cerrar menú al tocar cualquier link
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu?.classList.add('hidden');
+        });
+      });
+    </script>
+  </header>
+  
