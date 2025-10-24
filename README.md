@@ -1,6 +1,6 @@
 # Pinturería Colores - Sitio Web
 
-Este proyecto es un sitio web para una pinturería, construido con **Astro** y **Tailwind CSS**.  
+Este proyecto es un sitio web para una pinturería, construido con **Astro**, **Tailwind CSS**, **React** y **Zustand**.  
 El objetivo es que sea totalmente dinámico, responsive y editable sin necesidad de programar.
 
 ---
@@ -101,3 +101,7 @@ Hacé click en Compartir → Insertar un mapa → Copiar HTML.
 Del código copiado, solo necesitás el atributo src del <iframe>.
 
 Reemplazá el src en Footer.astro con la nueva URL:
+
+
+### Carrito
+En el carrito el cliente podra seleccionar los productos que quiera y luego generar un mensaje por WhatsApp para consultar la compra con la tienda
