@@ -16,7 +16,8 @@ export default function CartPage() {
     )}\n\nMuchas gracias.`;
   
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/1234567890?text=${encoded}`, "_blank");
+    //DEb emepzar con 54 por ser de argentina
+    window.open(`https://wa.me/541144116596?text=${encoded}`, "_blank");
   };
 
   // products es un objeto con keys = product.id
