@@ -1,4 +1,7 @@
 ---
+
+import CartElement from "./CartElement"
+
 interface SectionLink {
   id: string;
   title: string;
@@ -23,11 +26,12 @@ const { sections } = Astro.props as Props;
   
       <!-- Menú desktop -->
       <nav class="hidden md:flex gap-6">
-        <a href="#about" class="hover:text-red-600">Inicio</a>
+        <a href="/#about" class="hover:text-red-600">Inicio</a>
         {sections.map(s => (
-          <a href={`#${s.id}`} class="hover:text-red-600">{s.title}</a>
+          <a href={`/#${s.id}`} class="hover:text-red-600">{s.title}</a>
         ))}
-        <a href="#contacto" class="hover:text-red-600">Contacto</a>
+        <a href="/#contacto" class="hover:text-red-600">Contacto</a>
+        <CartElement client:load />
       </nav>
     </div>
   
@@ -36,12 +40,14 @@ const { sections } = Astro.props as Props;
       id="mobile-menu"
       class="hidden fixed inset-0 bg-white flex flex-col items-center justify-center gap-6 text-xl transition-all duration-300"
     >
-      <a href="#about" class="hover:text-red-600 mobile-link">Inicio</a>
+      <a href="/#about" class="hover:text-red-600 mobile-link">Inicio</a>
 
       {sections.map(s => (
-        <a href={`#${s.id}`} class="hover:text-red-600 mobile-link">{s.title}</a>
+        <a href={`/#${s.id}`} class="hover:text-red-600 mobile-link">{s.title}</a>
       ))}
-      <a href="#contacto" class="hover:text-red-600 mobile-link">Contacto</a>
+      <a href="/#contacto" class="hover:text-red-600 mobile-link">Contacto</a>
+      <CartElement client:load />
+
       <button id="close-menu" class="mt-8 px-4 py-2 bg-red-600 text-white rounded cursor-pointer">
         Cerrar
       </button>

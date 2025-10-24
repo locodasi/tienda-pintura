@@ -1,5 +1,6 @@
 // src/types.d.ts
 export interface Product {
+    id: number;
     name: string;
     img: string;
 }

@@ -1,60 +1,26 @@
 ---
-import '../styles/global.css' 
-
 import type { StoreData } from "../types/types";
 import data from "../data/data.json";
 
+import Layout from "../layout/Layout.astro";
 
-import Header from "../components/Header.astro";
 import About from "../components/About.astro";
 import Section from "../components/Section.astro";
-import Footer from "../components/Footer.astro";
 
 const storeData = data as StoreData;
 
-
-const automovil = [
-  { name: "Esmalte sintético rojo", img: "/images/auto1.jpg" },
-  { name: "Aerosol metalizado", img: "/images/auto1.jpg" },
-  { name: "Esmalte sintético rojo", img: "/images/auto1.jpg" },
-  { name: "Aerosol metalizado", img: "/images/auto1.jpg" },
-  { name: "Esmalte sintético rojo", img: "/images/auto1.jpg" },
-  { name: "Aerosol metalizado", img: "/images/auto1.jpg" },
-];
-const casa = [
-  { name: "Latex interior blanco", img: "/images/casa1.jpg" },
-  { name: "Impermeabilizante exterior", img: "/images/casa1.jpg" },
-];
-const personal = [
-  { name: "Pinceles profesionales", img: "/images/personal1.jpg" },
-  { name: "Guantes de pintor", img: "/images/personal1.jpg" },
-];
-
-const sectionsForHeader = Object.entries(data).map(([key, section]) => ({
-  id: key,
-  title: section.title
-}));
-
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Pinturería Colores</title>
-  </head>
-  <body class="font-sans text-gray-800 scroll-smooth">
-    <Header sections={sectionsForHeader}/>
-    <main>
-      <About />
-	  
-	  {Object.entries(storeData).map(([key, section]) => (
-        <Section id={key} title={section.title} subsections={section.subsections} />
-      ))}
-      <!-- <Section id="automovil" title="Automóvil" products={automovil} />
-      <Section id="casa" title="Casa" products={casa} />
-      <Section id="personal" title="Personal" products={personal} /> -->
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout>
+  <About />
+
+  {
+    Object.entries(storeData).map(([key, section]) => (
+      <Section
+        id={key}
+        title={section.title}
+        subsections={section.subsections}
+      />
+    ))
+  }
+</Layout>

@@ -1,0 +1,29 @@
+---
+import '../styles/global.css' 
+
+import data from "../data/data.json";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const sectionsForHeader = Object.entries(data).map(([key, section]) => ({
+  id: key,
+  title: section.title
+}));
+
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Pinturería Colores</title>
+  </head>
+  <body class="font-sans text-gray-800 scroll-smooth flex flex-col min-h-screen">
+    <Header sections={sectionsForHeader}/>
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
